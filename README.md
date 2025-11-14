@@ -10,6 +10,8 @@ This portfolio demonstrates proficiency in full-stack web development, modern fr
 
 **Visit the portfolio:** [https://amcrain.github.io/Technical-Writing-Portfolio/](https://amcrain.github.io/Technical-Writing-Portfolio/)
 
+The site is automatically deployed on every push to the `main` branch via GitHub Actions.
+
 ## ✨ Key Features
 
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices using Tailwind CSS
