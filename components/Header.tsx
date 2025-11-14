@@ -20,9 +20,12 @@ const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, theme, toggleT
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <a href="#main-content" className="text-xl md:text-2xl font-bold text-sky-600 dark:text-sky-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-slate-900 rounded-sm">
+            <button
+              onClick={() => setActiveTab(Tab.About)}
+              className="text-xl md:text-2xl font-bold text-sky-600 dark:text-sky-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-slate-900 rounded-sm hover:opacity-80 transition-opacity duration-200"
+            >
               {PERSONAL_INFO.name}
-            </a>
+            </button>
             <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400">{PERSONAL_INFO.title}</p>
           </div>
           <nav className="flex items-center space-x-2 sm:space-x-4">
