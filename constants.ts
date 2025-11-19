@@ -57,29 +57,29 @@ export const RESUME_SKILLS: string[] = [
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     {
         id: 1,
-        title: 'Project title #1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+        title: 'PowerPanel Installation and Maintenance Manual',
+        description: 'This project showcases my ability to develop structured, audience-specific technical documentation, as demonstrated by the PowerPanel Installation and Maintenance Manual. It features clear instructional design for complex procedures, adherence to safety communication standards, and integration of regulatory requirements, highlighting skills in information architecture, clarity, and precision.',
         imageUrl: 'https://picsum.photos/seed/project1/600/400',
         link: '#',
-        tech: ['OpenAPI', 'REST', 'Docusaurus'],
+        tech: ['Instructional Design', 'Product Documentation', 'Information Architecture', 'Standard Operating Procedures', 'Document Design'],
     },
     {
         id: 2,
-        title: 'Project title #2',
-        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+        title: 'PNW UX Audit Presentation',
+        description: 'This presentation, "Elevating User Experience: Applying UX Design Principles to PNWX.com," outlines a comprehensive UX audit of a medical equipment website. It identifies critical usability issues based on Universal Design Principles and provides actionable, data-driven recommendations for improving mobile responsiveness, accessibility, navigation, and overall user satisfaction, demonstrating a clear understanding of practical UX application.',
         imageUrl: 'https://picsum.photos/seed/project2/600/400',
         link: '#',
-        tech: ['Markdown', 'Interactive Demos', 'UX Writing'],
+        tech: ['UX Design Principles', 'Information Architecture', 'UX Audit', 'Data Visualization', 'Usability Testing'],
     },
     {
         id: 3,
-        title: 'Project title #3',
-        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
+        title: 'Painting Bare Wood Procedure',
+        description: 'I developed this "How to Paint Bare Wood" guide to simplify a multi-step process for end-users. It features detailed textual instructions combined with a logical flowchart, a checklist summary, and practical tips like knot sealing and primer tinting. This piece highlights my skills in instructional design, breaking down complex tasks, and creating user-friendly documentation.',
         imageUrl: 'https://picsum.photos/seed/project3/600/400',
         link: '#',
-        tech: ['Confluence', 'Content Curation', 'Information Architecture'],
+        tech: ['Instructional Design', 'Procedural Writing', 'Flowchart Design', 'User Guides', 'Process Documentation'],
     },
-    {
+   /* {
         id: 4,
         title: 'Project title #4',
         description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.',
@@ -102,5 +102,5 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         imageUrl: 'https://picsum.photos/seed/project6/600/400',
         link: '#',
         tech: ['Zendesk', 'Troubleshooting', 'Cross-functional Collaboration'],
-    }
+    } */
 ];
