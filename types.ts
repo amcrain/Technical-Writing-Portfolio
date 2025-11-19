@@ -23,6 +23,10 @@ export interface PortfolioProject {
   title: string;
   description: string;
   imageUrl: string;
+  /**
+   * Optional accessible alt text for the image. If not provided, UI falls back to the project title.
+   */
+  imageAlt?: string;
   link: string;
   tech: string[];
 }

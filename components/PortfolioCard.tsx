@@ -13,7 +13,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ project, index }) => {
       className="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group"
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" loading="lazy" />
+  <img src={project.imageUrl} alt={project.imageAlt ?? project.title} className="w-full h-48 object-cover" loading="lazy" />
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-100">{project.title}</h3>
         <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm">{project.description}</p>
