@@ -59,7 +59,6 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         id: 1,
         title: 'PowerPanel Installation and Maintenance Manual',
         description: 'This project showcases my ability to develop structured, audience-specific technical documentation, as demonstrated by the PowerPanel Installation and Maintenance Manual. It features clear instructional design for complex procedures, adherence to safety communication standards, and integration of regulatory requirements, highlighting skills in information architecture, clarity, and precision.',
-        // Replace the image file in `public/images/` with own photo (600x400 ratio recommended).
         imageUrl: 'public/images/Electrical-Panel.jpg',
         imageAlt: 'PowerPanel Installation and Maintenance Manual — cover or screenshot',
         link: '#',
@@ -69,7 +68,6 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         id: 2,
         title: 'PNW UX Audit Presentation',
         description: 'This presentation, "Elevating User Experience: Applying UX Design Principles to PNWX.com," outlines a comprehensive UX audit of a medical equipment website. It identifies critical usability issues based on Universal Design Principles and provides actionable, data-driven recommendations for improving mobile responsiveness, accessibility, navigation, and overall user satisfaction, demonstrating a clear understanding of practical UX application.',
-        // Replace the image file in `public/images/` with own photo (600x400 ratio recommended).
         imageUrl: 'public/images/PNW-Medical-Solution.png',
         imageAlt: 'PNW UX Audit Presentation — sample slide or cover image',
         link: '#',
@@ -79,7 +77,6 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         id: 3,
         title: 'Painting Bare Wood Procedure',
         description: 'I developed this "How to Paint Bare Wood"guide to simplify a multi-step process for end-users. It features detailed textual instructions combined with a logical flowchart, a checklist summary, and practical tips like knot sealing and primer tinting. This piece highlights my skills in instructional design, breaking down complex tasks, and creating user-friendly documentation.',
-        // Replace the image file in `public/images/` with your own photo (600x400 ratio recommended).
         imageUrl: 'public/images/Painting-Bare-Wood.png',
         imageAlt: 'How to Paint Bare Wood — example illustration or result photo',
         link: '#',
