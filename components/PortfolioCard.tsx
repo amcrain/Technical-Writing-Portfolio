@@ -9,12 +9,18 @@ interface PortfolioCardProps {
 }
 
 const PortfolioCard: React.FC<PortfolioCardProps> = ({ project, index, onViewPdf }) => {
+  // Resolve images against the app base URL so they work in dev and on Pages
+  const base = ((import.meta as any).env?.BASE_URL) ?? '/';
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  const imgPath = project.imageUrl.replace(/^\/+/, '');
+  const resolvedImg = `${normalizedBase}${imgPath}`;
+
   return (
     <div 
       className="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group flex flex-col h-full"
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      <img src={project.imageUrl} alt={project.imageAlt ?? project.title} className="w-full h-48 object-cover" loading="lazy" />
+      <img src={resolvedImg} alt={project.imageAlt ?? project.title} className="w-full h-48 object-cover" loading="lazy" />
       <div className="p-6 flex flex-col flex-1">
         <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-100">{project.title}</h3>
         <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm">{project.description}</p>
