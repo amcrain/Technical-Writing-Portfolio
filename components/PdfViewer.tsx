@@ -10,6 +10,14 @@ interface PdfViewerProps {
 const PdfViewer: React.FC<PdfViewerProps> = ({ pdfUrl, isOpen, onClose, title }) => {
   if (!isOpen) return null;
 
+  // Resolve the PDF path against the app base URL so it works in dev ("/")
+  // and when deployed under a subpath (for example "/Technical-Writing-Portfolio/").
+  // import.meta.env may not be typed in some TS configs, use a safe any cast.
+  const base = ((import.meta as any).env?.BASE_URL) ?? '/';
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+  const trimmedPdf = pdfUrl.replace(/^\/+/, '');
+  const resolvedPdfUrl = `${normalizedBase}${trimmedPdf}`;
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
       <div className="w-full max-w-5xl h-[85vh] bg-white dark:bg-slate-800 rounded-lg shadow-xl overflow-hidden flex flex-col">
@@ -27,7 +35,7 @@ const PdfViewer: React.FC<PdfViewerProps> = ({ pdfUrl, isOpen, onClose, title })
         <div className="flex-1 bg-slate-100 dark:bg-slate-900">
           {/* Using iframe for simplicity and broad browser compatibility. */}
           <iframe
-            src={`${pdfUrl}#toolbar=1&navpanes=0`}
+            src={`${resolvedPdfUrl}#toolbar=1&navpanes=0`}
             title={title ?? 'PDF viewer'}
             className="w-full h-full"
           />
