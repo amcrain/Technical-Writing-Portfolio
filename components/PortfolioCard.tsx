@@ -24,24 +24,30 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ project, index, onViewPdf
           ))}
         </div>
         <div className="flex items-center justify-between">
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block font-medium text-sky-600 dark:text-sky-400 group-hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-sm"
-            aria-label={`Open project link: ${project.title}`}
-          >
-            Visit &rarr;
-          </a>
+          {/* Tech tags stay on the left; action (View Project / Visit) is on the right */}
+          <div />
 
-          {project.pdfUrl && (
+          {project.pdfUrl ? (
+            // When a pdfUrl exists, show a single control labeled "View Project"
+            // styled like the original Visit link but as a button so it opens the modal.
             <button
               onClick={() => onViewPdf?.(project.pdfUrl!, project.title)}
-              className="ml-3 inline-flex items-center px-3 py-2 bg-sky-600 text-white rounded hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 transition-colors duration-200"
-              aria-label={`View project PDF: ${project.title}`}
+              className="inline-block font-medium text-sky-600 dark:text-sky-400 group-hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-sm"
+              aria-label={`View project: ${project.title}`}
             >
-              View PDF
+              View Project &rarr;
             </button>
+          ) : (
+            // Fallback: no pdf available — keep existing Visit link behavior
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-medium text-sky-600 dark:text-sky-400 group-hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-sm"
+              aria-label={`Open project link: ${project.title}`}
+            >
+              Visit &rarr;
+            </a>
           )}
         </div>
       </div>
