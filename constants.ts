@@ -61,6 +61,8 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         description: 'This project showcases my ability to develop structured, audience-specific technical documentation, as demonstrated by the PowerPanel Installation and Maintenance Manual. It features clear instructional design for complex procedures, adherence to safety communication standards, and integration of regulatory requirements, highlighting skills in information architecture, clarity, and precision.',
         imageUrl: 'public/images/Electrical-Panel.jpg',
         imageAlt: 'PowerPanel Installation and Maintenance Manual — cover or screenshot',
+        // PDF for embedded viewer — place this file under `public/pdfs/`
+        pdfUrl: '/pdfs/PowerPanel-Install-Maintenance-Manual.pdf',
         link: '#',
         tech: ['Instructional Design', 'Product Documentation', 'Information Architecture', 'Standard Operating Procedures', 'Document Design'],
     },

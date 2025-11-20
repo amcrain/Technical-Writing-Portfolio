@@ -27,6 +27,8 @@ export interface PortfolioProject {
    * Optional accessible alt text for the image. If not provided, UI falls back to the project title.
    */
   imageAlt?: string;
+  /** Optional PDF to open in the project viewer (served from /public/pdfs/) */
+  pdfUrl?: string;
   link: string;
   tech: string[];
 }

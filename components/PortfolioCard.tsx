@@ -5,9 +5,10 @@ import { PortfolioProject } from '../types';
 interface PortfolioCardProps {
   project: PortfolioProject;
   index: number;
+  onViewPdf?: (pdfUrl: string, title: string) => void;
 }
 
-const PortfolioCard: React.FC<PortfolioCardProps> = ({ project, index }) => {
+const PortfolioCard: React.FC<PortfolioCardProps> = ({ project, index, onViewPdf }) => {
   return (
     <div 
       className="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group"
@@ -22,15 +23,27 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ project, index }) => {
             <span key={t} className="text-xs font-medium bg-sky-100 text-sky-800 dark:bg-sky-900/50 dark:text-sky-300 px-2.5 py-1 rounded-full">{t}</span>
           ))}
         </div>
-        <a 
-          href={project.link} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="inline-block font-medium text-sky-600 dark:text-sky-400 group-hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-sm"
-          aria-label={`View project: ${project.title}`}
-        >
-          View Project &rarr;
-        </a>
+        <div className="flex items-center justify-between">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block font-medium text-sky-600 dark:text-sky-400 group-hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-sm"
+            aria-label={`Open project link: ${project.title}`}
+          >
+            Visit &rarr;
+          </a>
+
+          {project.pdfUrl && (
+            <button
+              onClick={() => onViewPdf?.(project.pdfUrl!, project.title)}
+              className="ml-3 inline-flex items-center px-3 py-2 bg-sky-600 text-white rounded hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 transition-colors duration-200"
+              aria-label={`View project PDF: ${project.title}`}
+            >
+              View PDF
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

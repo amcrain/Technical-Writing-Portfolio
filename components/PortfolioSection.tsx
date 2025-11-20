@@ -1,9 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { PORTFOLIO_PROJECTS } from '../constants';
 import PortfolioCard from './PortfolioCard';
+import PdfViewer from './PdfViewer';
 
 const PortfolioSection: React.FC = () => {
+  const [selectedPdf, setSelectedPdf] = useState<{ url: string; title?: string } | null>(null);
+
   return (
     <section aria-labelledby="portfolio-heading" className="animate-fade-in">
       <div className="text-center mb-12">
@@ -16,9 +19,23 @@ const PortfolioSection: React.FC = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {PORTFOLIO_PROJECTS.map((project, index) => (
-          <PortfolioCard key={project.id} project={project} index={index} />
+          <PortfolioCard
+            key={project.id}
+            project={project}
+            index={index}
+            onViewPdf={(url, title) => setSelectedPdf({ url, title })}
+          />
         ))}
       </div>
+
+      {selectedPdf && (
+        <PdfViewer
+          pdfUrl={selectedPdf.url}
+          title={selectedPdf.title}
+          isOpen={!!selectedPdf}
+          onClose={() => setSelectedPdf(null)}
+        />
+      )}
     </section>
   );
 };
