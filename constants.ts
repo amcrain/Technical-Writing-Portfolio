@@ -65,7 +65,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         // PDF for embedded viewer — place this file under `public/pdfs/`
         pdfUrl: '/pdfs/PowerPanel-Install-Maintenance-Manual.pdf',
         link: '#',
-        tech: ['Instructional Design', 'Product Documentation', 'Information Architecture', 'Standard Operating Procedures', 'Document Design'],
+        tech: ['Instructional Design', 'Product Documentation', 'Information Architecture', 'Standard Operating Procedures', 'Document Design', 'Installation Guide', 'Maintenance Guide'],
     },
     {
         id: 2,
@@ -82,6 +82,8 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         description: 'I developed this "How to Paint Bare Wood"guide to simplify a multi-step process for end-users. It features detailed textual instructions combined with a logical flowchart, a checklist summary, and practical tips like knot sealing and primer tinting. This piece highlights my skills in instructional design, breaking down complex tasks, and creating user-friendly documentation.',
     imageUrl: 'images/Painting-Bare-Wood.png',
         imageAlt: 'How to Paint Bare Wood — example illustration or result photo',
+    // PDF for embedded viewer — place this file under `public/pdfs/`
+    pdfUrl: '/pdfs/Painting-Bare-Wood-Procedure.pdf',
         link: '#',
         tech: ['Instructional Design', 'Procedural Writing', 'Flowchart Design', 'User Guides', 'Process Documentation'],
     },
