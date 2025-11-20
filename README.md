@@ -85,7 +85,26 @@ The GitHub Actions workflow will automatically deploy on every push to `main`.
 └── README.md           # Project documentation
 ```
 
-## 🚀 Workflow
+## � Assets & PDFs
+
+- Portfolio images and PDFs are served from the `public/` directory.
+   - Images: drop images into `public/images/` and reference them from `constants.ts` (examples use `public/images/*.jpg` currently). Recommended image size: ~600x400 for consistent card layout.
+   - PDFs: place project PDFs in `public/pdfs/` (for example `public/pdfs/PowerPanel-Install-Maintenance-Manual.pdf`). Update `constants.ts`'s `pdfUrl` field if you choose a different filename.
+
+Notes:
+- Filenames and paths in `constants.ts` currently point to `public/images/...` and `public/pdfs/...`. If you change names, update `constants.ts` accordingly.
+
+## 🔍 Viewer behavior
+
+- The Portfolio cards expose a single "View Project →" control. If a project has a `pdfUrl` configured, clicking the control opens an embedded PDF viewer modal (served from `public/pdfs/`). If no `pdfUrl` is present, the control navigates to the project's external `link` in a new tab.
+- The viewer currently uses an `iframe` for simplicity and broad compatibility. If you'd like richer controls (thumbnails, text selection), we can replace the iframe with `pdfjs-dist` rendering.
+
+## 🌐 Base URL & GitHub Pages
+
+- When deployed to GitHub Pages the site is served under a base path (for example `/Technical-Writing-Portfolio/`). Static assets are resolved relative to the app base URL. The app resolves PDF and image URLs against `import.meta.env.BASE_URL` so assets work both in local dev (`/`) and when deployed under a subpath.
+- Recommendation: keep assets in `public/images/` and `public/pdfs/` and use the existing `constants.ts` paths (the app will resolve them correctly). If you need to hardcode a different path, ensure it accounts for the repository base path when deployed.
+
+## �🚀 Workflow
 
 1. Make changes locally in development mode (`npm run dev`)
 2. Test and preview changes
