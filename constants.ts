@@ -73,6 +73,8 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         description: 'This presentation, "Elevating User Experience: Applying UX Design Principles to PNWX.com," outlines a comprehensive UX audit of a medical equipment website. It identifies critical usability issues based on Universal Design Principles and provides actionable, data-driven recommendations for improving mobile responsiveness, accessibility, navigation, and overall user satisfaction, demonstrating a clear understanding of practical UX application.',
     imageUrl: 'images/PNW-Medical-Solution.png',
         imageAlt: 'PNW UX Audit Presentation — sample slide or cover image',
+        // PDF for embedded viewer — place this file under `public/pdfs/`
+        pdfUrl: '/pdfs/PNWX-UX-Audit-Presentation.pdf',
         link: '#',
         tech: ['UX Design Principles', 'Information Architecture', 'UX Audit', 'Data Visualization', 'Usability Testing'],
     },
