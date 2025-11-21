@@ -23,17 +23,30 @@ const PdfViewer: React.FC<PdfViewerProps> = ({ pdfUrl, isOpen, onClose, title })
       <div className="w-full max-w-5xl h-[85vh] bg-white dark:bg-slate-800 rounded-lg shadow-xl overflow-hidden flex flex-col">
         <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200 dark:border-slate-700">
           <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 truncate">{title ?? 'Project PDF'}</h3>
-          <button
-            onClick={onClose}
-            aria-label="Close PDF viewer"
-            className="text-slate-600 hover:text-slate-900 dark:text-slate-300"
-          >
-            ✕
-          </button>
+          <div className="flex items-center gap-3">
+            {/* Show an explicit open-in-new-tab control which helps mobile browsers show all pages */}
+            <a
+              href={resolvedPdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-slate-700 hover:underline dark:text-slate-300"
+            >
+              Open in new tab
+            </a>
+            <button
+              onClick={onClose}
+              aria-label="Close PDF viewer"
+              className="text-slate-600 hover:text-slate-900 dark:text-slate-300"
+            >
+              ✕
+            </button>
+          </div>
         </div>
 
         <div className="flex-1 bg-slate-100 dark:bg-slate-900">
-          {/* Using iframe for simplicity and broad browser compatibility. */}
+          {/* Using iframe for simplicity and broad browser compatibility. On some mobile browsers
+              embedded PDF renderers only show the first page. The "Open in new tab" link above
+              lets users open the PDF in the native viewer which supports full multi-page navigation. */}
           <iframe
             src={`${resolvedPdfUrl}#toolbar=1&navpanes=0`}
             title={title ?? 'PDF viewer'}
