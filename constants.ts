@@ -21,11 +21,11 @@ export const RESUME_EXPERIENCE: ResumeEntry[] = [
         company: 'New Relic',
         period: '08/2022 - Ongoing',
         description: [
-            'Troubleshoot mobile development issues across React Native, Kotlin, Swift, and Objective-C — spin up test applications to reproduce and debug complex problems.',
-            'Investigate customers\' application monitoring using New Relic Synthetics and diagnose/resolution of issues related to Terraform deployments and environment configuration.',
-            'Provide guidance on writing efficient NRQL and GraphQL queries for data retrieval, analysis, and operational troubleshooting.',
-            'Use HTML, CSS, and JavaScript expertise to diagnose DOM, element identification, and web interaction issues affecting monitoring and instrumentation.',
-            'Authored API documentation, product runbooks, and both internal and external troubleshooting guides; document incidents and resolutions to improve future triage and knowledge transfer.'
+            'Investigate and reproduce customer issues across mobile and web platforms; create clear, reproducible steps and technical notes for engineering triage.',
+            'Write concise runbooks, incident notes, and troubleshooting guides that reduce time-to-resolution and support cross-team handoffs.',
+            'Author API documentation and NRQL/GraphQL examples to enable accurate data queries and operational analysis.',
+            'Translate debugging outcomes into user-focused documentation and knowledge-base articles for internal and external audiences.',
+            'Collaborate with engineering and product to surface recurring issues and improve monitoring configurations and documentation.'
         ]
     },
     {
@@ -33,9 +33,9 @@ export const RESUME_EXPERIENCE: ResumeEntry[] = [
         company: 'Blapp',
         period: '06/2022 - 08/2022',
         description: [
-            'Contributed as an iOS engineer for a startup mobile product serving 50,000+ international users; supported both iOS and Android development workflows.',
-            'Built React / React Native components in TypeScript, including shared constants, MapView integration, and customized stack navigator animations for a 35,000+ user app.',
-            'Monitored and optimized mobile performance (response times, load speed, battery usage) using Firebase performance tools and device testing across network conditions.'
+            'Built and documented React / React Native components in TypeScript, producing readable code and clear implementation notes for other engineers.',
+            'Created reproducible test cases and performance notes to support troubleshooting and to inform user-facing guidance.',
+            'Captured implementation decisions and integration steps for shared components and navigation flows to aid maintenance and onboarding.'
         ]
     },
     {
@@ -43,9 +43,9 @@ export const RESUME_EXPERIENCE: ResumeEntry[] = [
         company: 'Review With Friends',
         period: '03/2022 - 08/2022',
         description: [
-            'Designed intuitive UI/UX prototypes and component-level workflows in Figma to support a scalable design system.',
-            'Implemented React Storybook and React Testing Library to document and test components, enabling reliable regression testing and developer onboarding.',
-            'Engineered reusable, type-safe UI components with TypeScript and modern ES6 patterns.'
+            'Documented UI components and usage patterns in Storybook to make design intent discoverable and reproducible by engineers.',
+            'Wrote component-level documentation and tests to improve reliability and reduce onboarding time for new developers.',
+            'Developed reusable, type-safe UI components and captured design rationale to support consistent user experiences.'
         ]
     },
     {
@@ -53,8 +53,8 @@ export const RESUME_EXPERIENCE: ResumeEntry[] = [
         company: 'Tech Ladies',
         period: '01/2022 - 01/2023',
         description: [
-            'Collaborated with a cohort of women engineers through code review, pair-programming, whiteboarding, and mock technical interviews (10–20 members biweekly).',
-            'Led and hosted virtual meetups and coding sessions that fostered peer learning and cross-functional collaboration.'
+            'Led peer code reviews, pair-programming sessions, and mock interviews to improve technical skills and communication within the community.',
+            'Prepared workshop materials and documentation to help members practice interview questions and hands-on coding exercises.'
         ]
     }
 ];
