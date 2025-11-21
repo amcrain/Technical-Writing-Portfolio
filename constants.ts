@@ -17,19 +17,44 @@ export const ABOUT_ME_CONTENT = {
 
 export const RESUME_EXPERIENCE: ResumeEntry[] = [
     {
-        role: 'Role #1',
-        company: 'Company #1',
-        period: 'Placeholder',
+        role: 'Frontend Support Engineer',
+        company: 'New Relic',
+        period: '08/2022 - Ongoing',
         description: [
-            'a brief overview of the main responsibilities',
+            'Troubleshoot mobile development issues across React Native, Kotlin, Swift, and Objective-C — spin up test applications to reproduce and debug complex problems.',
+            'Investigate customers\' application monitoring using New Relic Synthetics and diagnose/resolution of issues related to Terraform deployments and environment configuration.',
+            'Provide guidance on writing efficient NRQL and GraphQL queries for data retrieval, analysis, and operational troubleshooting.',
+            'Use HTML, CSS, and JavaScript expertise to diagnose DOM, element identification, and web interaction issues affecting monitoring and instrumentation.',
+            'Authored API documentation, product runbooks, and both internal and external troubleshooting guides; document incidents and resolutions to improve future triage and knowledge transfer.'
         ]
     },
     {
-        role: 'Role #2',
-        company: 'Company #2',
-        period: 'Placeholder',
+        role: 'iOS Engineer Intern',
+        company: 'Blapp',
+        period: '06/2022 - 08/2022',
         description: [
-            'a brief overview of the main responsibilities',
+            'Contributed as an iOS engineer for a startup mobile product serving 50,000+ international users; supported both iOS and Android development workflows.',
+            'Built React / React Native components in TypeScript, including shared constants, MapView integration, and customized stack navigator animations for a 35,000+ user app.',
+            'Monitored and optimized mobile performance (response times, load speed, battery usage) using Firebase performance tools and device testing across network conditions.'
+        ]
+    },
+    {
+        role: 'Frontend Engineer Intern',
+        company: 'Review With Friends',
+        period: '03/2022 - 08/2022',
+        description: [
+            'Designed intuitive UI/UX prototypes and component-level workflows in Figma to support a scalable design system.',
+            'Implemented React Storybook and React Testing Library to document and test components, enabling reliable regression testing and developer onboarding.',
+            'Engineered reusable, type-safe UI components with TypeScript and modern ES6 patterns.'
+        ]
+    },
+    {
+        role: 'Founding Member',
+        company: 'Tech Ladies',
+        period: '01/2022 - 01/2023',
+        description: [
+            'Collaborated with a cohort of women engineers through code review, pair-programming, whiteboarding, and mock technical interviews (10–20 members biweekly).',
+            'Led and hosted virtual meetups and coding sessions that fostered peer learning and cross-functional collaboration.'
         ]
     }
 ];
@@ -39,12 +64,12 @@ export const RESUME_CERTIFICATIONS: CertificationEntry[] = [
         certification: 'Technical Writing Certification',
         institution: 'Oregon State University',
         period: '2025',
-    },
+    }, /*
     {
         certification: 'Placeholder',
         institution: 'State College',
         period: 'Date here',
-    }
+    } */
 ];
 
 export const RESUME_SKILLS: string[] = [
@@ -69,7 +94,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     },
     {
         id: 2,
-        title: 'PNW UX Audit Presentation',
+        title: 'PNWX UX Audit Presentation',
         description: 'This presentation, "Elevating User Experience: Applying UX Design Principles to PNWX.com," outlines a comprehensive UX audit of a medical equipment website. It identifies critical usability issues based on Universal Design Principles and provides actionable, data-driven recommendations for improving mobile responsiveness, accessibility, navigation, and overall user satisfaction, demonstrating a clear understanding of practical UX application.',
     imageUrl: 'images/PNW-Medical-Solution.png',
         imageAlt: 'PNW UX Audit Presentation — sample slide or cover image',
