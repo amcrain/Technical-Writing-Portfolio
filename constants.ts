@@ -73,9 +73,16 @@ export const RESUME_CERTIFICATIONS: CertificationEntry[] = [
 ];
 
 export const RESUME_SKILLS: string[] = [
-    'API Documentation (REST, GraphQL)', 'Docusaurus', 'Git & GitHub', 'Markdown & AsciiDoc',
-    'Agile Methodologies', 'User Onboarding', 'Content Strategy', 'Style Guide Development',
-    'Jira & Confluence', 'Video Tutorials (Camtasia)',
+    // Core technical writing
+    'Technical Writing', 'API Documentation (REST, GraphQL)', 'Runbooks & Troubleshooting Guides', 'Knowledge Base Articles', 'Information Architecture', 'Style Guide Development',
+    // Tools & platforms surfaced in resume/portfolio
+    'Markdown & AsciiDoc', 'Git & GitHub', 'Storybook', 'React Testing Library', 'Docusaurus',
+    // Product & UX
+    'UX Writing', 'UX Audit & Data Visualization', 'Procedural Writing', 'SOPs',
+    // Engineering context
+    'React & TypeScript', 'React Native', 'GraphQL & NRQL', 'Terraform (deployments)', 
+    // Collaboration & process
+    'Agile Methodologies', 'Cross-functional Collaboration', 'User Onboarding',
 ];
 
 
