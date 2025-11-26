@@ -26,7 +26,11 @@ const CertificationEntryCard: React.FC<{ entry: CertificationEntry }> = ({ entry
 
 const ResumeSection: React.FC = () => {
   const handleDownloadPDF = () => {
-    window.open('/Ariana-Crain-Resume.pdf', '_blank');
+    // Resolve against app base URL for GitHub Pages subpath compatibility
+    const base = ((import.meta as any).env?.BASE_URL) ?? '/';
+    const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+    const resolved = `${normalizedBase}pdfs/CrainAriana.pdf`;
+    window.open(resolved, '_blank');
   };
 
   return (
@@ -34,8 +38,8 @@ const ResumeSection: React.FC = () => {
        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
          <h1 id="resume-heading" className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl text-center flex-1">Resume</h1>
          <a
-           href="/Ariana-Crain-Resume.pdf"
-           download="Ariana-Crain-Resume.pdf"
+           href={`${((import.meta as any).env?.BASE_URL ?? '/').replace(/\/$/, '/')}pdfs/CrainAriana.pdf`}
+           download="CrainAriana.pdf"
            className="inline-flex items-center justify-center bg-sky-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-slate-900 whitespace-nowrap"
            aria-label="Download resume as PDF"
          >
